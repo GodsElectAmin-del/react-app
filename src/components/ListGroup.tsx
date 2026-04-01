@@ -9,6 +9,7 @@ function ListGroup() {
     "Ms Marvel",
     "Dooms Day",
   ];
+  let selectionIndex = 0;
 
   return (
     <>
@@ -19,7 +20,11 @@ function ListGroup() {
           <li
             key={item}
             onClick={() => console.log(item, index)}
-            className="list-group-item active"
+            className={
+              selectionIndex == index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
           >
             {item}
           </li>
