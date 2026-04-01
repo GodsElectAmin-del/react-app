@@ -19,7 +19,7 @@ function ListGroup() {
           <li
             key={item}
             onClick={() => console.log(item, index)}
-            className="list-group-item"
+            className="list-group-item active"
           >
             {item}
           </li>
