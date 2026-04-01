@@ -1,3 +1,4 @@
+import { MouseEvent } from "react";
 function ListGroup() {
   let items = [];
   items = [
@@ -10,6 +11,8 @@ function ListGroup() {
     "Dooms Day",
   ];
   let selectionIndex = 0;
+  // Event Hanle
+  const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
     <>
@@ -19,7 +22,7 @@ function ListGroup() {
         {items.map((item, index) => (
           <li
             key={item}
-            onClick={() => console.log(item, index)}
+            onClick={handleClick}
             className={
               selectionIndex == index
                 ? "list-group-item active"
